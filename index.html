@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 EMULATOR</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href=""><h2><strong>COVID-19 EMULATOR</strong></h2></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <section class="row">
+                <section class="col-6">
+                    <h3>Enter the Following Information</h3>
+                    <hr />
+                    <div class="row">
+                        <div class="col-8">
+                            <form action="">
+                                <div class="form-group">
+                                    <label class="control-label" for="population"><strong> Population</strong></label>
+                                    <input type="number" class="form-control" placeholder="Enter Population Data" min="1" data-population
+                                        data-val="true" data-val-required="The Population field is required." 
+                                        id="population" name="population" value="" />
+                                        <span class="text-danger field-validation-valid" data-valmsg-for="population" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="elapse"><strong> Time to Elapse</strong></label>
+                                    <input type="number" class="form-control" placeholder="Enter Time to Elapse Data" min="1" data-time-to-elapse 
+                                    data-val="true" data-val-required="The Time to Elapse field is required." 
+                                    id="elapse" name="elapse" value="" />
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="elapse" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="case"><strong> Reported Cases</strong></label>
+                                    <input type="number" class="form-control" placeholder="Enter Reported Cases Data" min="0" data-reported-cases 
+                                    data-val="true" data-val-required="The Reported Cases field is required." 
+                                    id="case" name="case" value="" />
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="case" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label"><strong> Total Hospital Beds</strong></label>
+                                    <input type="number" class="form-control" placeholder="Enter Total Hospital Beds Data" min="0" data-total-hospital-beds 
+                                    data-val="true" data-val-required="The Total Hospital Beds field is required." 
+                                    id="bed" name="bed" value="" />
+                                    <span class="text-danger field-validation-valid" data-valmsg-for="bed" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label  class="control-label"><strong>Select Period Type</strong></label>
+                                    <select class="form-control" data-period-type>
+                                        <option disabled>*** Select the Period Type Data ***</option>
+                                        <option value="days">Days</option>
+                                        <option value="weeks">Weeks</option>
+                                        <option value="months">Months</option>
+                                    </select>
+                                    <span asp-validation-for="SemesterID" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" data-goestimate value="Submit the Data" class="btn btn-primary" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="col-6 mt-5">
+                    <br/>
+                    <h3><em><u>CONVID-19 ESTIMATOR APPLICATION</u></em></h3>
+                    <h5 class="mt-5"><em>
+                            This is a novelty estimator, that gives
+                            an ideas of how you can use technology, open source, and research to provide
+                            advocacy and advisory to COVID-19 pandemic.
+                            <br/>
+                            <br/>
+                            <br/>
+                            Using Stats from Harvard Medical School / Massachusetts General Hospital As a Case Study
+                  </em></h5>
+                </section>
+            </section>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Olowofela Yinka
+        </div>
+    </footer>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
