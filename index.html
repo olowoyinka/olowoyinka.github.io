@@ -30,45 +30,52 @@
                         <div class="col-8">
                             <form action="">
                                 <div class="form-group">
-                                    <label class="control-label" for="population"><strong> Population</strong></label>
+                                    <label class="control-label" id="basic-addon1" for="population"><strong> Population</strong></label>
                                     <input type="number" class="form-control" placeholder="Enter Population Data" min="1" data-population
-                                        data-val="true" data-val-required="The Population field is required." 
+                                        data-val="true" data-val-required="The Population field is required."
+                                        aria-label="data-population"
+                                        aria-describedby="basic-addon1"
                                         id="population" name="population" value="" />
                                         <span class="text-danger field-validation-valid" data-valmsg-for="population" data-valmsg-replace="true"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label" for="elapse"><strong> Time to Elapse</strong></label>
-                                    <input type="number" class="form-control" placeholder="Enter Time to Elapse Data" min="1" data-time-to-elapse 
+                                    <label class="control-label" id="basic-addon2" for="elapse"><strong> Time to Elapse</strong></label>
+                                    <input type="number" class="form-control" placeholder="Enter Time to Elapse Data" min="1" data-time-to-elapse
+                                    aria-label="data-time-to-elapse"
+                                    aria-describedby="basic-addon2" 
                                     data-val="true" data-val-required="The Time to Elapse field is required." 
                                     id="elapse" name="elapse" value="" />
                                     <span class="text-danger field-validation-valid" data-valmsg-for="elapse" data-valmsg-replace="true"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label" for="case"><strong> Reported Cases</strong></label>
+                                    <label class="control-label" id="basic-addon3" for="case"><strong> Reported Cases</strong></label>
                                     <input type="number" class="form-control" placeholder="Enter Reported Cases Data" min="0" data-reported-cases 
                                     data-val="true" data-val-required="The Reported Cases field is required." 
+                                    aria-label="data-reported-cases"
+                                    aria-describedby="basic-addon3"
                                     id="case" name="case" value="" />
                                     <span class="text-danger field-validation-valid" data-valmsg-for="case" data-valmsg-replace="true"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label"><strong> Total Hospital Beds</strong></label>
+                                    <label for="bed" id="basic-addon4" class="control-label"><strong> Total Hospital Beds</strong></label>
                                     <input type="number" class="form-control" placeholder="Enter Total Hospital Beds Data" min="0" data-total-hospital-beds 
-                                    data-val="true" data-val-required="The Total Hospital Beds field is required." 
+                                    data-val="true" data-val-required="The Total Hospital Beds field is required."
+                                    aria-label="data-total-hospital-beds"
+                                    aria-describedby="basic-addon4"
                                     id="bed" name="bed" value="" />
                                     <span class="text-danger field-validation-valid" data-valmsg-for="bed" data-valmsg-replace="true"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label  class="control-label"><strong>Select Period Type</strong></label>
-                                    <select class="form-control" data-period-type>
+                                    <label id="basic-addon5"  class="control-label"><strong>Select Period Type</strong></label>
+                                    <select class="form-control" data-period-type aria-label="data-period-type" aria-describedby="basic-addon5">
                                         <option disabled>*** Select the Period Type Data ***</option>
                                         <option value="days">Days</option>
                                         <option value="weeks">Weeks</option>
                                         <option value="months">Months</option>
                                     </select>
-                                    <span asp-validation-for="SemesterID" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" id="SubmittheData" aria-label="SubmittheData" aria-labelledby="SubmittheData" data-go-estimate value="Submit the Data" class="btn btn-primary" />
+                                    <input type="submit" aria-label="Submit the Data" aria-labelledby="Submit the Data" data-go-estimate value="Submit the Data" class="btn btn-primary" />
                                 </div>
                             </form>
                         </div>
